@@ -1,4 +1,4 @@
-# Desafios
+# Desafios do Basico ao Avançado
 
 ## Básico – Focar na Sintaxe e Tipagem
 

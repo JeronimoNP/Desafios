@@ -1,0 +1,25 @@
+{
+  "name": "desafios",
+  "version": "1.0.0",
+  "description": "Crie uma API que converte valores entre diferentes moedas.\r - Use classes e interfaces para estruturar os dados.\r - Exemplo: `GET /convert?from=USD&to=BRL&amount=100`",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node src/index.js",
+    "build": "tsc",
+    "dev": "tsx watch src/index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.0.1"
+  },
+  "devDependencies": {
+    "@tsconfig/node-lts": "22.0.1",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}
