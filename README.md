@@ -2,10 +2,10 @@
 
 ## Básico – Focar na Sintaxe e Tipagem
 
-### Conversor de Moedas
+### Conversor de Moedas ✅
 Crie uma API que converte valores entre diferentes moedas.
 - Use classes e interfaces para estruturar os dados.
-- Exemplo: `GET /convert?from=USD&to=BRL&amount=100`
+- Exemplo: `GET /convert`
 
 ### Validador de CPF e CNPJ
 Implemente funções para validar CPF e CNPJ no cadastro de usuários.

@@ -1,4 +1,4 @@
-import { Request, Response} from "express";
+import { Request, Response } from "express";
 const express = require('express');
 import conversor from '../Conversor de Moedas/Converso';
 
@@ -12,10 +12,12 @@ app.post('/convert', (req: Request, res: Response) => {
     //convertendo string para float
     const BRLamount1 = parseFloat(BRLamount);
     const USDprice1 = parseFloat(USDprice);
-    //verificador se não está invalido os dados
-    if (undefined === (BRLamount1) || undefined === (USDprice1)) {
+    console.log(BRLamount1, USDprice1);
+    //verifica se os valores são válidos
+    const info = conversor.Validador(BRLamount1, USDprice1);
+    if (info === 1) {
         return res.status(400).json({
-            mensagem: "Erro na requisição: BRLamount e USDprice devem ser números válidos"
+            mensagem: "Erro na requisição: BRLamount e USDprice devem ser números válidos\n exemplo de requisição: { BRLamount: 100, USDprice: 5.90 }"
         });
     }
     //envia os dados para a função
@@ -26,6 +28,6 @@ app.post('/convert', (req: Request, res: Response) => {
     });
 });
 
-app.listen(port, ()=> {
+app.listen(port, () => {
     console.log(`Server running on port ${port}`)
 });
